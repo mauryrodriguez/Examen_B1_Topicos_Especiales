@@ -9,19 +9,27 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import {firebaseConfig} from '../environments/environment';
-import {AngularFireModule} from '@angular/fire';
-import {AngularFireAuthModule} from '@angular/fire/auth';
+import { firebaseConfig } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { appInitialize } from '@ionic/angular/app-initialize';
 
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule} from '@angular/fire/auth'
+
+import { AngularFirestoreModule} from '@angular/fire/firestore';
+
+import { ChatComponent} from './componentes/chat/chat.component';
+import { FormsModule} from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule, AngularFirestoreModule],
+  imports: [CommonModule, FormsModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule,
+  AngularFireModule.initializeApp(firebaseConfig),
+AngularFireAuthModule, AngularFirestoreModule],
   providers: [
     StatusBar,
     SplashScreen,

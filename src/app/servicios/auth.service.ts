@@ -1,28 +1,49 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth} from '@angular/fire/auth';
-import {promise} from 'protractor';
-import { Router } from '@angular/router';
+import {AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { promise } from 'protractor';
+import { Router} from '@angular/router';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private auth: AngularFireAuth, private router: Router) {}
-  login(email: string, password: string){
+  constructor( private AFauth : AngularFireAuth, private router : Router
+ ) { }
 
-    return new Promise((resolve, rejected) => {
-      this.auth.signInWithEmailAndPassword(email, password).then(user => {
-        resolve (user);
-      }).catch(err => rejected(err));
+  login(email: string,  password:string){
+    return new Promise((resolve, rejected) =>{
+      this.AFauth.signInWithEmailAndPassword(email, password).then(user =>{
+        console.log(user)
+        resolve(user);
+      }).catch(err => console.log('error:' + err))
     });
+    
   }
 
+
   logout(){
-    this.auth.signOut().then(() => {
+    this.AFauth.signOut().then(() =>{
       this.router.navigate(['/login']);
     });
   }
 
+  register(email: string, password: string, name: string){
 
+    return new Promise((resolve, reject) =>{
+      this.AFauth.createUserWithEmailAndPassword(email, password).then(res =>{
+        const uid = res.user.uid;
+        console.log(res.user.uid);
+        
+       /* this.db.collection('users').doc(uid).set({
+          name: name,
+          uid : uid
+        })*/
+resolve(res)
+      }).catch(err => reject(err))
+    })
+    
+  }
 }

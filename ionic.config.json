@@ -1,5 +1,7 @@
 {
   "name": "examentopicose",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
