@@ -6,6 +6,16 @@ export const environment = {
   production: false
 };
 
+export const firebaseConfig = {
+  apiKey: 'AIzaSyCa0ndZ_6msEUo8RS4VfRwFtTExS1KsmTs',
+  authDomain: 'examen-ab37b.firebaseapp.com',
+  databaseURL: 'https://examen-ab37b-default-rtdb.firebaseio.com',
+  projectId: 'examen-ab37b',
+  storageBucket: 'examen-ab37b.appspot.com',
+  messagingSenderId: '1008780393751',
+  appId: '1:1008780393751:web:6beada2e78d6993f2ccb52',
+  measurementId: 'G-ZG8VZWPXG6'
+};
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

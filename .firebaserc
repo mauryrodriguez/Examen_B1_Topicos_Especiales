@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "examen-ab37b": {
+      "hosting": {
+        "app": [
+          "examen-ab37b"
+        ]
+      }
+    }
+  }
+}
