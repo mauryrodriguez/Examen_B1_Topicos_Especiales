@@ -34,9 +34,11 @@ Inonic Chat desarrollado con Ionic Framework, la aplicacion APK ya instalada en 
 Descarga `APK` clic en el siguiente enlace [Ionic Chat](https://github.com/mauryrodriguez/apk_examenb1_topicos2020b). :white_check_mark:
 *una vez descargada la app e instalada en tu dispositivo android*
 recomendamos elegir unos de los siguientes usuarios
-*usuario 1*
-## maury@gmail.com       
-##123123
-*usuario 2*
-## mauricioo@gmail.com   
-##123123
+
+
+
+maury@gmail.com       
+123123
+
+mauricioo@gmail.com   
+123123
